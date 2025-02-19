@@ -4,10 +4,10 @@ import Countries from './components/Countries/Countries'
 function App() {
 
   return (
-    <>
-      <h1>React World Tour</h1>
+    <div className='montserrat'>
+      <h1 className='text-3xl md:text-5xl font-semibold mb-1'>React World Tour</h1>
       <Countries></Countries>
-    </>
+    </div>
   )
 }
 

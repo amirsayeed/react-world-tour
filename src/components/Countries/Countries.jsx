@@ -24,23 +24,25 @@ const Countries = () => {
     }
 
     return (
-        <div>
-            <h3>Countries: {countries.length}</h3>
+        <div className="mt-8 space-y-5">
+            <h3 className="text-lg md:text-2xl font-medium">Countries: {countries.length}</h3>
             <div>
-                <h5>Visited countries: {visitedCountries.length}</h5>
+                <h5 className="text-lg font-medium">Visited countries: {visitedCountries.length}</h5>
                 <ul>
                     {
                         visitedCountries.map(country => <li key={country.alpha2Code}>{country.name}</li>)
                     }
                 </ul>
             </div>
-            <div className="flag-container">
-                <h3>Visited Flags: {visitedFlags.length}</h3>
-                {
-                    visitedFlags.map(flag => <img key={flag.alpha2Code} src={flag}></img>)
-                }
+            <div>
+                <h3 className="text-lg font-medium">Visited Flags: {visitedFlags.length}</h3>
+                <div className="flex flex-col md:flex-row items-center justify-center flex-wrap gap-2">
+                    {
+                    visitedFlags.map(flag => <img className="w-20" key={flag.alpha2Code} src={flag}></img>)
+                    }
+                </div>
             </div>
-            <div className="country-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-center">
                 {
                     countries.map(country => <Country
                         key={country.alpha2Code}
