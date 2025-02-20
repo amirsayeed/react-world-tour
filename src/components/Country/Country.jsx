@@ -22,10 +22,10 @@ const Country = ({
             </div>
             <div className='space-y-2'>
             <div className='flex flex-col lg:flex-row gap-2'>
-            <button className='rounded-lg text-sm btn' onClick={() => handleVisitedCountry(country)}>Mark as visited </button>
-            <button className='rounded-lg text-sm btn' onClick={() => handleVisitedFlags(country.flags.png)}>Add Flags</button>
+            <button className='btn btn-primary rounded-lg text-sm' onClick={() => handleVisitedCountry(country)}>Mark as visited </button>
+            <button className='btn btn-primary rounded-lg text-sm' onClick={() => handleVisitedFlags(country.flags.png)}>Add Flags</button>
             </div>
-            <button className="visit rounded-lg text-sm btn" onClick={handleVisited}>{visited ? 'Visited' : "Going"}</button>
+            <button className="btn btn-primary visit rounded-lg text-sm" onClick={handleVisited}>{visited ? 'Visited' : "Going"}</button>
             <br></br>
             {visited ? 'I have visited this country.' : 'I want to visit'}
             </div>
