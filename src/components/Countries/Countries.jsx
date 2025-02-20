@@ -36,7 +36,7 @@ const Countries = () => {
             </div>
             <div>
                 <h3 className="text-lg font-medium">Visited Flags: {visitedFlags.length}</h3>
-                <div className="flex flex-col md:flex-row items-center justify-center flex-wrap gap-2">
+                <div className="flex items-center flex-wrap gap-2">
                     {
                     visitedFlags.map(flag => <img className="w-20" key={flag.alpha2Code} src={flag}></img>)
                     }
