@@ -27,8 +27,8 @@ const Countries = () => {
         <div className="mt-8 space-y-5">
             <h3 className="text-lg md:text-2xl font-medium">Countries: {countries.length}</h3>
             <div>
-                <h5 className="text-lg font-medium">Visited countries: {visitedCountries.length}</h5>
-                <ul>
+                <h3 className="text-lg font-medium">Visited countries: {visitedCountries.length}</h3>
+                <ul className="list-disc list-inside px-2">
                     {
                         visitedCountries.map(country => <li key={country.alpha2Code}>{country.name}</li>)
                     }
@@ -36,9 +36,9 @@ const Countries = () => {
             </div>
             <div>
                 <h3 className="text-lg font-medium">Visited Flags: {visitedFlags.length}</h3>
-                <div className="flex items-center flex-wrap gap-2">
+                <div className="mt-2 flex items-center flex-wrap gap-2">
                     {
-                    visitedFlags.map(flag => <img className="w-20" key={flag.alpha2Code} src={flag}></img>)
+                    visitedFlags.map(flag => <img className="w-20 rounded-md" key={flag.alpha2Code} src={flag}></img>)
                     }
                 </div>
             </div>

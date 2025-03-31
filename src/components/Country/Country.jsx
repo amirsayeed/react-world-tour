@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Country.css';
 const Country = ({
     country, handleVisitedCountry, handleVisitedFlags }) => {
-    //console.log(country);
+    console.log(country);
     const { name, flags, population, area, alpha2Code } = country;
     const [visited, setVisited] = useState(false);
 
@@ -27,7 +27,9 @@ const Country = ({
             </div>
             <button className="btn btn-primary visit rounded-lg text-sm p-2" onClick={handleVisited}>{visited ? 'Visited' : "Going"}</button>
             <br></br>
-            {visited ? 'I have visited this country.' : 'I want to visit'}
+            <div className='mt-2'>
+                {visited ? 'I have visited this country.' : 'I want to visit'}
+            </div>
             </div>
         </div>
     );
